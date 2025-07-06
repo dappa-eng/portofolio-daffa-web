@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Daffa Muhammad</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <img src="images/project1.png" alt="Preview Project" class="project-img">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-flex">
+      <div class="logo">Daffa</div>
+      <ul class="nav-links">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Daffa Muhammad</h1>
+      <p>UI/UX Designer & Web Programmer</p>
+    </div>
+  </header>
+
+  <section class="about fade-in" id="about">...
+    <div class="container">
+      <h2>Tentang Saya</h2>
+      <p>Saya seorang mahasiswa multimedia yang ingin belajar menjadi desainer dan programmer web yang berfokus pada
+        antarmuka pengguna yang intuitif dan pengalaman digital yang menyenangkan.</p>
+    </div>
+  </section>
+
+  <section class="projects fade-in" id="projects">
+    <div class="container">
+      <h2>Project Terbaru</h2>
+
+      <div class="project fade-in delay-1">
+        <h3>UI Redesign Aplikasi e-commerce</h3>
+        <p>Peran: UI/UX Designer</p>
+        <p>Tools: Figma, Adobe XD</p>
+      </div>
+
+      <div class="project fade-in delay-2">
+        <h3>Website Portfolio Photographer</h3>
+        <p>Peran: Front-End Developer</p>
+        <p>Tools: HTML, CSS, JavaScript</p>
+      </div>
+      <div class="project fade-in delay-3">
+        <h3>Redesign Aplikasi Kasir</h3>
+        <p><strong>Peran:</strong> UI/UX Designer</p>
+        <p><strong>Tools:</strong> Figma, Adobe XD</p>
+        <p><strong>Deskripsi:</strong> Membuat tampilan antarmuka baru untuk aplikasi kasir berbasis Android agar lebih
+          mudah digunakan oleh pemilik UMKM.</p>
+      </div>
+
+      <div class="project fade-in delay-4">
+        <h3>Landing Page Jasa Freelance</h3>
+        <p><strong>Peran:</strong> Web Developer</p>
+        <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+        <p><strong>Deskripsi:</strong> Website sederhana untuk menawarkan jasa desain dan pemrograman berbasis responsif
+          dan cepat diakses.</p>
+      </div>
+
+      <div class="project fade-in delay-5">
+        <h3>Desain UI Aplikasi Jadwal Sekolah</h3>
+        <p><strong>Peran:</strong> UI Designer</p>
+        <p><strong>Tools:</strong> Figma</p>
+        <p><strong>Deskripsi:</strong> Membuat tampilan clean dan ringan untuk anak sekolah dengan fitur drag-and-drop
+          jadwal pelajaran.</p>
+      </div>
+      <div class="project fade-in delay-6">
+        <h3>Website Portofolio Pribadi</h3>
+        <p>Peran: Web Developer</p>
+        <p>Tools: HTML, CSS, JavaScript</p>
+      </div>
+
+      <div class="project fade-in delay-7">
+        <h3>Desain UI Aplikasi Mobile Banking</h3>
+        <p>Peran: UI/UX Designer</p>
+        <p>Tools: Figma, Adobe XD</p>
+      </div>
+
+      <div class="project fade-in delay-8">
+        <h3>Website E-learning</h3>
+        <p>Peran: Front-End Developer</p>
+        <p>Tools: HTML, CSS, JavaScript</p>
+      </div>
+  </section>
+
+  <section class="contact fade-in" id="contact">
+    <div class="container">
+      <h2>Hubungi Saya</h2>
+      <p>Email: daffamhmd48@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/daffamhmd</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Daffa Muhammad</p>
+    </div>
+  </footer>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+
+
+
+</body>
+
+</html>
